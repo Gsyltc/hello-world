@@ -1,0 +1,316 @@
+''
+''
+'' Original Author: Sylvain Goubaud
+''
+
+!$THEME = "alithya"
+
+!$FGCOLOR = "#FFF"
+!$BLUE_DARK = "#002957"
+!$BLUE_LIGHT = "#1F96E3"
+!$GREEN = "#C9ED21"
+!$DARK = "#303030"
+
+!$BGCOLOR = $WHITE
+!$FGCOLOR = $BLUE_DARK
+
+!ifndef $FONT_NAME
+  !$FONT_NAME = "Poppins"
+!endif
+
+!ifndef $FONT_NAME_MONOSPACED
+  !$FONT_NAME_MONOSPACED = "Poppins"
+!endif
+
+<style>
+  root {
+    BackgroundColor $BGCOLOR
+    FontColor $FGCOLOR
+    FontName $FONT_NAME
+    HyperLinkColor $BLUE_LIGHT
+    LineColor $FGCOLOR
+    LineThickness 1
+    Margin 5
+  }
+  document {
+    caption {
+      LineThickness 0
+    }
+    footer {
+      LineThickness 0
+    }
+    header {
+      LineThickness 0
+    }
+    title {
+      FontSize 22
+      LineThickness 0
+    }
+  }
+  groupHeader {
+    BackgroundColor $FGCOLOR
+    FontColor $BGCOLOR
+    FontStyle bold
+  }
+  node {
+    MaximumWidth 300
+  }
+  referenceHeader {
+    BackgroundColor $FGCOLOR
+    FontColor $BGCOLOR
+    FontStyle bold
+  }
+  separator {
+    BackgroundColor $FGCOLOR
+    FontColor $BGCOLOR
+    FontStyle bold
+  }
+</style>
+
+skinparam ArrowLollipopColor $FGCOLOR
+skinparam BackgroundColor $BGCOLOR
+skinparam DefaultFontName $FONT_NAME
+skinparam DefaultMonospacedFontName $FONT_NAME_MONOSPACED
+skinparam LifelineStrategy nosolid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor $FGCOLOR
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor $BGCOLOR
+  BarColor $FGCOLOR
+  BorderColor $FGCOLOR
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam Boundary {
+  FontColor $FGCOLOR
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor $BGCOLOR
+  FontName $FONT_NAME_MONOSPACED
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor $GREEN
+  BorderColor $FGCOLOR
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam ClassAttribute {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam ClassStereotype {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam Footer {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam Header {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam Hyperlink {
+  Color $ORANGE
+}
+skinparam IconPackage {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconPrivate {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconProtected {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconPublic {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam Note {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+  FontStyle italic
+}
+skinparam Object {
+  BorderColor $FGCOLOR
+  backgroundColor $BLUE_DARK
+  borderColor $BLUE_LIGHT 
+  fontColor $WHITE 
+  Shadowing 1.0
+  arrow<<Critique>> {
+    LineColor red
+  }
+}
+
+skinparam Object<<new>> {
+  backgroundColor $BLUE_LIGHT
+  borderColor green 
+  fontColor $WHITE 
+  Shadowing 1.0
+  arrow<<new>> {
+    LineColor green
+  }
+}
+
+skinparam Object<<modified>> {
+  backgroundColor $BLUE_LIGHT
+  borderColor purple 
+  fontColor $WHITE 
+  Shadowing 1.0
+  arrow<<modified>> {
+    LineColor red
+  }
+}
+
+skinparam Object<<temporary>> {
+  backgroundColor $BLUE_LIGHT
+  borderColor orange 
+  fontColor $WHITE 
+  Shadowing 1.0
+  arrow<<modified>> {
+    LineColor red
+  }
+}
+
+skinparam Object<<deleted>> {
+  backgroundColor $WHITE
+  borderColor red 
+  fontColor grey 
+  Shadowing 1.0
+  arrow<<deleted>> {
+    LineColor red
+  }
+}
+
+skinparam Package {
+  backgroundColor $WHITE
+  BorderColor $FGCOLOR
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+skinparam State {
+  backgroundColor $BLUE_DARK
+  BackgroundColor $BGCOLOR
+  BorderColor $FGCOLOR
+}
+
+skinparam UseCaseStereoType {
+  FontColor $FGCOLOR
+  FontName $FONT_NAME
+}
+
+skinparam sequence {
+  SequenceTitleFontColor $BLUE_DARK
+  ArrowColor $BLUE_DARK
+  LifeLineBorderColor #GREEN 
+  fontColor $BLUE_DARK
+  arrowColor $BLUE_DARK
+  arrowFontColor $BLUE_DARK
+}
+
+skinparam actorStyle awesome
+skinparam actor {
+  backgroundColor $BLUE_DARK
+  borderColor $BLUE_LIGHT
+  fontColor $BLUE_DARK
+}
+
+skinparam usecase {
+  backgroundColor $BLUE_LIGHT
+  borderColor $BLUE_LIGHT
+  fontColor $WHITE
+  stereotypeFontColor $SECONDARY
+  stereotypeFontSize $FONTSIZE
+  arrowColor $FGCOLOR
+  arrowFontColor $FGCOLOR
+  arrowFontName $FONTNAME
+}
+
+<style>
+jsonDiagram {
+  node {
+    BackGroundColor $BLUE_DARK
+    separator {
+      LineThickness 0.5
+      LineColor black
+      LineStyle 1-5
+    }
+  }
+  arrow {
+    BackGroundColor lightblue
+    LineColor green
+    LineThickness 2
+    LineStyle 2-5
+  }
+  highlight {
+    BackGroundColor red
+    FontColor white
+    FontStyle italic
+  }
+}
+
+wbsDiagram, mindmapDiagram, yamlDiagram {
+  node {
+    HorizontalAlignment center
+    backgroundColor $BLUE_LIGHT
+    borderColor $BLUE_DARK
+    fontColor $BLUE_DARK
+    Shadowing 1.0
+}
+
+rootNode {
+    HorizontalAlignment center
+      backgroundColor $BLUE_DARK
+      borderColor $BLUE_LIGHT
+    fontColor $WHITE
+     Shadowing 1.0
+}
+
+leafNode {
+    backgroundColor $GREEN
+    borderColor $BLUE_LIGHT
+    fontColor $BLUE_DARK
+}
+
+arrow {
+    LineStyle 0
+    LineThickness 0.8
+    LineColor $BLUE_DARK
+  }
+}
+</style>
+
+skinparam map<<Error>> {
+  backgroundColor red
+  borderColor red
+  fontColor white
+  Shadowing 1.0
+}
+skinparam map<<En_cours>> {
+  backgroundColor $BLUE_LIGHT
+  borderColor $BLUE_DARK
+  fontColor $BLUE_DARK
+  Shadowing 1.0
+}
+skinparam map<<Bloquee>> {
+  backgroundColor #F8CECC
+  fontColor $BLUE_DARK
+  Shadowing 1.0
+}
+skinparam map<<Finie>> {
+  backgroundColor $GREEN
+  borderColor $BLUE_LIGHT
+  fontColor $BLUE_DARK
+  Shadowing 1.0
+}
+
